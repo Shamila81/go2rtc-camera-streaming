@@ -204,4 +204,61 @@ cython_debug/
 # Marimo
 marimo/_static/
 marimo/_lsp/
-__marimo__/
+__marimo__/                                                     
+
+notepad .gitignore
+```
+
+Then **scroll to the bottom** and add this section:
+```
+# ============================================
+# Project Specific (Go2RTC Camera Streaming)
+# ============================================
+
+# Docker
+docker-compose.override.yml
+
+# Home Assistant
+config/homeassistant/secrets.yaml
+config/homeassistant/.storage/
+config/homeassistant/home-assistant.log
+config/homeassistant/home-assistant_v2.db
+config/homeassistant/*.db
+config/homeassistant/*.db-shm
+config/homeassistant/*.db-wal
+
+# Go2RTC
+config/go2rtc.yaml.backup
+
+# Environment variables
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Sensitive data
+**/secrets.yaml
+**/passwords.txt
+**/*_secret*
+
+# Test files and media
+test_videos/
+*.mp4
+*.avi
+*.mkv
+*.mov
+
+# Logs (additional)
+logs/*.log
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
